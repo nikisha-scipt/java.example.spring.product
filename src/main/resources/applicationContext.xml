@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath:app.properties"/>
+
+    <bean id = "store"
+          class="org.example.store.ProductTrackerImpl"
+          scope="prototype">
+    </bean>
+
+    <bean id = "create"
+          class="org.example.action.CreateImpl">
+    </bean>
+
+    <bean id = "delete"
+          class="org.example.action.DeleteImpl">
+    </bean>
+
+    <bean id = "exit"
+          class="org.example.action.ExitImpl">
+    </bean>
+
+    <bean id = "findAllProduct"
+          class="org.example.action.FindAllProduct">
+    </bean>
+
+    <bean id = "findById"
+          class="org.example.action.FindByIdImpl">
+    </bean>
+
+    <bean id = "findByName"
+          class="org.example.action.FindByNameImpl">
+    </bean>
+
+    <bean id = "replace"
+          class="org.example.action.ReplaceImpl">
+    </bean>
+
+    <bean id = "apple"
+          class="org.example.model.Product"
+          scope="prototype">
+        <constructor-arg value="apple"/>
+        <constructor-arg value="350"/>
+    </bean>
+
+    <bean id = "orange"
+          class="org.example.model.Product"
+          scope="prototype">
+        <constructor-arg value="orange"/>
+        <constructor-arg value="450"/>
+    </bean>
+
+    <bean id = "burger"
+          class="org.example.model.Product"
+          scope="prototype">
+        <constructor-arg value="burger"/>
+        <constructor-arg value="222"/>
+    </bean>
+
+    <bean id = "banana"
+          class="org.example.model.Product"
+          scope="prototype">
+        <constructor-arg value="banana"/>
+        <constructor-arg value="77"/>
+    </bean>
+
+    <bean id = "shocolate"
+          class="org.example.model.Product"
+          scope="prototype">
+        <constructor-arg value="shocolate"/>
+        <constructor-arg value="74"/>
+    </bean>
+
+
+</beans>
